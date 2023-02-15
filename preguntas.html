@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BIO - MIKE</title>
+	<style>
+		body {
+			background: linear-gradient(to top, #be43dd, #d40e82);
+			color: white;
+			font-family: 'Times New Roman', sans-serif;
+			text-align: center;
+			margin: 100px;
+			padding-top: 30px;
+			padding-bottom: 350px;
+		}
+		h1 {
+			font-size: 3em;
+			font-family: 'Times New Roman', cursive;
+			margin: 0;
+			padding: 10px 0;
+		}
+		h2 {
+			font-size: 2em;
+			margin: 0;
+			padding: 10px 0;
+		}
+		h4 {
+			margin: 2;
+		}
+		p {
+			font-size: 1.2em;
+			margin: 0;
+			padding: 10px 0;
+		}
+		button {
+			background-color: white;
+			color: #c507ebe8;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 20px 10px;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Miguel Angel Tena Garcia</h1>
+	<h2>Ingeniería en Sistemas Computacionales</h2>
+	<article class="Preguntas">
+    <h2>
+        
+        <blockquote>¿Cuál es la diferencia entre Internet y la World Wide Web?
+            Internet es una red global de computadoras interconectadas que permite la comunicación y el intercambio de información en todo el mundo. La World Wide Web (WWW o Web) es un sistema de información que se ejecuta en la parte superior de Internet, que permite a los usuarios acceder y compartir información en forma de páginas web, hipervínculos, imágenes y otros recursos multimedia a través de navegadores web.
+            </blockquote>
+        <blockquote>¿Cuáles son las partes de un URL?
+            Localizador Uniforme de Recursos, tiene varias partes que describen la ubicación y el acceso a un recurso en la web. Las partes de un URL son:
+            1.	Esquema: Especifica el protocolo que se utiliza para acceder al recurso, como "http://" o "https://".
+            2.	Nombre de dominio: Identifica la ubicación del recurso en la web y suele ser el nombre del sitio web.
+            3.	Puerto (opcional): Especifica el número de puerto en el servidor web al que se accede para obtener el recurso. Por defecto, el puerto para HTTP es 80 y para HTTPS es 443.
+            4.	Ruta: Especifica la ubicación del recurso dentro del sitio web, que a menudo es la ruta a un archivo específico.
+            5.	Cadena de consulta (opcional): Proporciona información adicional al servidor web sobre la solicitud, como datos de búsqueda o parámetros de aplicación.
+            6.	Fragmento (opcional): Identifica una sección específica del recurso al que se accede, como una sección específica de una página web o un marcador en un documento.
+            </blockquote>
+
+            <blockquote>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?
+                Los métodos HTTP especifican la acción que el cliente desea realizar en un recurso específico en un servidor web. A continuación, se describe el propósito de cada método HTTP:
+                
+                GET: Solicita una representación del recurso especificado en la URL. Los datos son recibidos en el cuerpo de la respuesta.
+                HEAD: Solicita los mismos datos que GET, pero sin el cuerpo de respuesta. Este método se utiliza para obtener información sobre el recurso sin transferir los datos completos.
+                POST: Envía datos al servidor web para ser procesados, como enviar un formulario. El cuerpo de la respuesta puede contener datos adicionales devueltos por el servidor.
+                PUT: Envía datos para actualizar o reemplazar el recurso especificado en la URL. El cuerpo de la respuesta puede contener datos adicionales devueltos por el servidor.
+                PATCH: Envía datos para actualizar parcialmente el recurso especificado en la URL. Este método se utiliza para actualizar una parte del recurso sin necesidad de reemplazar todo el recurso. El cuerpo de la respuesta puede contener datos adicionales devueltos por el servidor.
+                DELETE: Solicita eliminar el recurso especificado en la URL. El cuerpo de la respuesta puede contener datos adicionales devueltos por el servidor.
+                </blockquote> 
+            
+                <blockquote>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+                    Al enviar un formulario HTML que contiene información sensible como un usuario y contraseña, se debe utilizar el método HTTP POST en lugar del método GET. Esto se debe a que el método POST envía los datos del formulario en el cuerpo de la solicitud HTTP, mientras que el método GET los envía en la URL. Como señala Mozilla Developer Network, "Esto significa que los datos enviados con el método POST no están expuestos en la barra de direcciones del navegador, y por lo tanto son menos propensos a ser víctimas de ataques maliciosos".
+                    
+                </blockquote>
+        
+                    <blockquote>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? 
+                        Depende de la naturaleza del error 404. Si se trata de una página que se ha eliminado intencionalmente del sitio web, entonces no es necesario que el desarrollador corrija el error. Sin embargo, si se trata de un error en el sitio web que impide que los usuarios accedan a una página existente, entonces sí, es responsabilidad del desarrollador investigar y corregir el error para asegurar que los usuarios puedan acceder a la página correctamente.
+                        </blockquote>
+        
+                        <blockquote> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?
+                            Sí, es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500. El error 500, también conocido como "Internal Server Error", indica que se produjo un error en el servidor web mientras procesaba la solicitud del cliente, lo que impidió que se pudiera completar la solicitud.
+                           </blockquote>
+                        <blockquote> ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+                            En HTML, un atributo o elemento se considera "depreciado" o "desaprobado" (en inglés, "deprecated") cuando se ha dejado de recomendar su uso o se considera que pronto se eliminará de la especificación del lenguaje. Los elementos o atributos deprecados aún funcionan en los navegadores web, pero se recomienda que se eviten y se reemplacen con alternativas más modernas y compatibles con los estándares actuales.
+                            </blockquote>
+                        <blockquote>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?
+                            En general, HTML5 busca simplificar y unificar el lenguaje HTML, eliminando elementos y atributos redundantes y promoviendo el uso de estándares web modernos y semánticamente precisos.
+                            HTML incluye nuevos elementos que en HTML 4 no existían como article, aside>, audio>, video>, header>, footer>, nav>, entre otros, así como la depreciación de algunos elementos obsoletos, además de mejoras en el consumo de contenido multimedia, así como mejoras en la accesibilidad.
+                           </blockquote>
+                        <blockquote>¿Qué componentes de estructura y estilo tiene una tabla?
+                            table: Este es el elemento principal que define la tabla. Se utiliza para indicar el inicio y el final de la tabla.
+                            tr: Este elemento se utiliza para definir las filas de la tabla. Dentro de cada fila se definen las celdas (td) o los encabezados de las columnas (th).
+                            td: Este elemento se utiliza para definir las celdas de la tabla, donde se colocan los datos de la tabla.
+                            th: Este elemento se utiliza para definir los encabezados de las columnas de la tabla.
+                            caption: Este elemento se utiliza para proporcionar un título o una leyenda para la tabla.
+                           
+                                Se pueden utilizar atributos de estilo en los elementos HTML para definir el aspecto visual de la tabla, como el color de fondo, el borde, el tamaño de la letra, entre otros.
+                            </blockquote>
+        
+                            <blockquote>
+                                ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?
+                    Cuando se accede a una página a través de un URL en un navegador web, se utiliza el método HTTP GET por defecto. El método GET solicita una representación del recurso especificado en el URL y devuelve los datos en el cuerpo de la respuesta HTTP, El navegador web envía una solicitud GET al servidor web en el que se aloja la página web, que devuelve la respuesta con el código HTML y otros recursos asociados necesarios para mostrar la página web. El navegador procesa la respuesta y muestra la página web en la ventana del navegador. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+                    Cuando un servidor web devuelve una respuesta HTTP con el código 200, significa que la solicitud del cliente fue procesada con éxito y que el servidor ha devuelto correctamente los datos solicitados. El código de estado HTTP 200 OK indica que la solicitud fue exitosa y que el contenido de la respuesta se encuentra en el cuerpo del mensaje.
+                       
+                            </blockquote>
+                            <blockquote>  ¿Cuáles son los principales controles de una forma HTML5?
+                                Algunos de los principales controles de una forma HTML5 son: <br> 
+                                input>: Este es el control más común en una forma HTML5 y se utiliza para crear diferentes tipos de campos de entrada, como campos de texto, casillas de verificación, botones de radio, campos de correo electrónico, números, teléfonos, contraseñas, entre otros.<br>
+                                textarea>: Este control se utiliza para crear campos de texto de varias líneas.<br> 
+                                select>: Este control se utiliza para crear listas desplegables o selectores.<br> 
+                                button>: Este control se utiliza para crear botones en la forma que permiten al usuario realizar una acción, como enviar la forma o realizar una operación específica.<br> 
+                                label>: Este control se utiliza para asociar etiquetas con los campos de entrada y para proporcionar una descripción del campo.<br> 
+                                fieldset>: Este control se utiliza para agrupar campos de entrada relacionados y crear un borde alrededor del grupo.<br> 
+                                legend>: Este control se utiliza para proporcionar una leyenda o un título para un conjunto de campos agrupados en un fieldset>.
+                                datalist>: Este control se utiliza para proporcionar una lista de sugerencias para un campo de entrada.
+                                </blockquote>
+
+        </h2>
+	<h5>Editado con Visual Studio Code</h5>
+	<a href="https://www.linkedin.com/in/matena/" target="_blank"><button>LinkedIn</button></a>
+	<a href="preguntas.html" target="_blank"><button>LinkedIn</button></a>
+	<a href="https://www.instagram.com/mike.tena" target="_blank"><button>Instagram</button></a>
+</body>
+</html>
