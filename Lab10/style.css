@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 10px 0
+}
+
+body {
+    background: linear-gradient(to top, #610d34, #702240e5);
+    color: #fff;
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Times New Roman', cursive
+}
+
+h2 {
+    font-size: 2em
+}
+
+button,
+p {
+    font-size: 1.2em
+}
+
+h4 {
+    margin: 2
+}
+
+button {
+    background-color: #4d0529;
+    color: #dab8b8e8;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 20px 10px;
+    cursor: pointer
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
