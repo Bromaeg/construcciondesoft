@@ -1,1 +1,1 @@
-nombre=Dante&apellido=Padrino&edad=30&email=Tec%40tec.mx
+nombre=Mike&apellido=&edad=18&email=s%40s.com

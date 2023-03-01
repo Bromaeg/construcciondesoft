@@ -1,9 +1,15 @@
-console.log("Hola desde node");
+console.log("Hola desde npm");
 
 //El modulo filesystem sirve para acceder al sistema de archivos en la computadora
-
 const filesystem = require("fs");
-filesystem.writeFileSync("texto1.txt", "Hola desde node! by mike");
+filesystem.writeFileSync("texto1.txt", "Hola desde npm! by mike");
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const modulo1 = require('./routes/modulo1');
+const modulo2 = require('./routes/modulo2');
+
+const app = express();
 
 
 let imprimir = (numero) =>{
@@ -57,7 +63,7 @@ const server = http.createServer((request, response) => {
     else if (request.url == "/acerca" && request.method == "GET"){
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("<h1>Acerca de los masones</h1>");
-        response.write("<p>La masoneria es una fraternidad de hombres que comparten ciertos valores eticos y morales, y que trabajan juntos para mejorar a si mismos y a la sociedad en general. La masoneria se origino en Europa en la Edad Media como un gremio de albaniles que construian catedrales y otros edificios importantes. Con el tiempo, la fraternidad se transformo en una organizacion mas amplia que incluia a personas de distintas profesiones y clases sociales.</p>");
+        response.write("<p>La masoneria es una fraternidad de hombres que comparten ciertos valores eticos y morales, y que trabajan juntos para mejorar a si mismos y a la sociedad en general. La masoneria se origino en Europa en la Edad Media como un gremio de albaniles que construian catedrales y otros edificios importantes. Con el tiempo, la fraternidad se transformo en una organizacion mas amplia que incluia a personas de distintas profesiones y clases sociales.</p>"); 
         response.write("<a href='/'>Regresar al inicio</a>");
         response.write("<form action=/acerca method = POST>")
         response.write(form);
@@ -77,6 +83,7 @@ const server = http.createServer((request, response) => {
             response.write("<p>Gracias por registrarte</p>");
             filesystem.writeFileSync("registro.txt", datos);
             response.write("<a href='/'>Regresar al inicio</a>");
+            response.end();
         });
     }
 
@@ -86,10 +93,9 @@ const server = http.createServer((request, response) => {
         response.write("<h1>404 Not Found</h1>");
         response.write("<p>La agina que buscas no existe</p>");
         response.write("<a href='/'>Regresar al inicio</a>");
-
+        response.end();
         
     }
-    response.end();
 });
 
 server.listen(3000, () => {
@@ -119,9 +125,12 @@ setTimeout(() => {
 
 //Crea una funcion que reciba un string y escriba este en un archivo de texto llamado "texto.txt" con el modulo fs
 
-function escribirArchivo(texto){
-    filesystem.writeFileSync("texto2.txt", texto);
-}
+app.use(bodyParser.urlencoded({ extended: false }));
 
-escribirArchivo("Hola desde el Tecnologico de Monterrey!");
+app.use('/modulo1', modulo1);
+app.use('/modulo2', modulo2);
 
+// Ruta 404
+app.use((req, res, next) => {
+  res.status(404).send('Página no encontrada');
+});

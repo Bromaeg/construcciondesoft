@@ -1,0 +1,31 @@
+{
+  "name": "lab11",
+  "version": "1.0.0",
+  "description": "Laboratorio de NPM y NODE",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bromaeg/construcciondesoft.git"
+  },
+  "keywords": [
+    "NPM",
+    "NODE",
+    "JS",
+    "HTML",
+    "TEC"
+  ],
+  "author": "Mike Tena Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bromaeg/construcciondesoft/issues"
+  },
+  "homepage": "https://github.com/Bromaeg/construcciondesoft#readme",
+  "devDependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
