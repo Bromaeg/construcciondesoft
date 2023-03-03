@@ -7,8 +7,8 @@ const ejs = require('ejs');
 
 
 
-// Importar las vistas
-const index = require('./views/index.ejs');
+// Importar las vistas como HTML estático
+const index = fs.readFileSync('./views/index.ejs', 'utf8');
 
 // Crear la aplicación de Express
 const app = express();
