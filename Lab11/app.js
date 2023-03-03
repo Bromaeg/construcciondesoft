@@ -1,9 +1,8 @@
 console.log("Hola desde npm");
 
-//El modulo filesystem sirve para acceder al sistema de archivos en la computadora
+//Definimos filesystem, express, body-parser, modulo1 y modulo2 
 const filesystem = require("fs");
 filesystem.writeFileSync("texto1.txt", "Hola desde npm! by mike");
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const modulo1 = require('./routes/modulo1');
@@ -11,24 +10,20 @@ const modulo2 = require('./routes/modulo2');
 
 const app = express();
 
-
+// definimos imprimir como una funcion que recibe un arreglo de numeros y lo imprime en la consola
 let imprimir = (numero) =>{
     console.log(numero);
 }
-
 const arreglo = [5000, 60,61,90,100,10,20,100];
-
 for (let item of arreglo){
     setTimeout(() => {
         console.log(item);
     }, item);
 }
 
-//Crea una pequeña aplicación web que al enviar una petición al servidor, despliegue una de las páginas (index.html)
-
+// Crea un servidor web que al recibir una petición al servidor, despliegue una de las páginas (index.html)
 const http = require("http");
 const fs = require("fs");
-
 let form = `
     <fieldset>
         <legend>¿Quieres ser mason?</legend>
@@ -50,7 +45,6 @@ let form = `
 
 
 `;
-
 
 const server = http.createServer((request, response) => {
     console.log("Petición recibida");
@@ -91,20 +85,18 @@ const server = http.createServer((request, response) => {
         
         response.writeHead(404, {"Content-Type": "text/html"});
         response.write("<h1>404 Not Found</h1>");
-        response.write("<p>La agina que buscas no existe</p>");
+        response.write("<p>La pagina que buscas no existe</p>");
         response.write("<a href='/'>Regresar al inicio</a>");
         response.end();
         
     }
 });
-
 server.listen(3000, () => {
     console.log("Servidor iniciado en el puerto 3000");
 });
 
 
 // Crea una funcion que genere el promedio de un arreglo de numeros llamado "numeros"
-
 function promedio(numeros){
     let suma = 0;
     for (let numero of numeros){
@@ -112,21 +104,14 @@ function promedio(numeros){
     }
     return suma / numeros.length;
 }
-
 const numeros = [1,2,3,4,5,6,7,8,9,10];
-
-
 console.log(promedio(numeros));
-
-
 setTimeout(() => {
     console.log("hackeado");
 }, 1000);
 
-//Crea una funcion que reciba un string y escriba este en un archivo de texto llamado "texto.txt" con el modulo fs
-
+//body-parser es un middleware que nos permite acceder a los datos de los formularios
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use('/modulo1', modulo1);
 app.use('/modulo2', modulo2);
 
