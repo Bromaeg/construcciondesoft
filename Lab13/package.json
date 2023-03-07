@@ -1,0 +1,28 @@
+{
+  "name": "lab12",
+  "version": "1.0.0",
+  "description": "Laboratorio HTML Dinamico",
+  "main": "app.js",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "expres": "^0.0.5",
+    "node": "^19.6.1"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "EJS",
+    "EXPRESS",
+    "NODE",
+    "JS"
+  ],
+  "author": "Mike Tena",
+  "license": "MIT"
+}
