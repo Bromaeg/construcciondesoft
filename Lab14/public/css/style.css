@@ -1,25 +1,18 @@
 .image {
     border: 1px solid #dbdbdb;
-    border-radius: 2px;
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
   
-  .image{
-    object-fit: contain;
-    height: 55%;
-    width: 55%;
-    transition: transform 0.7s ease;
-  
+  .image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease;
   }
   
-  .image:hover {
+  .image:hover img {
     transform: scale(1.1);
   }
-
-  .container.is-widescreen .image {
-    height: 55%;
-    width: 55%;
-  }
-
   
