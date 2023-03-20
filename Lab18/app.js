@@ -41,6 +41,47 @@ app.get('/', (req, res, next) => {
   }
 });
 
+// Verificar si el usuario está registrado
+app.post('/', (req, res, next) => {
+  const username = req.body.username;
+  const password = req.body.password;
+  connection.query(
+    'SELECT * FROM masones WHERE username = ? AND password = ?',
+    [username, password],
+    (err, results, fields) => {
+      if (err) {
+        console.log('Error al buscar los datos: ', err);
+        res.sendStatus(500);
+      } else if (results.length === 1) {
+        req.session.isLoggedIn = true;
+        req.session.user = { username };
+        req.session.save((err) => {
+          if (err) {
+            console.log('Error al guardar la sesión: ', err);
+          } else {
+            res.redirect('/module');
+          }
+        });
+      } else {
+        res.render('index', { pageTitle: 'Inicio', errorMessage: 'Usuario o contraseña incorrectos' });
+      }
+    }
+  );
+});
+
+// Middleware para verificar si el usuario está autenticado
+function requireLogin(req, res, next) {
+  if (req.session.isLoggedIn) {
+    return next();
+  }
+  res.redirect('/');
+}
+
+// Crear una ruta para la página "modulo1"
+app.get('/module', requireLogin, (req, res, next) => {
+  res.render('modulo1.ejs', { pageTitle: 'Módulo 1' });
+});
+
 
 // Configurar login
 app.post('/', (req, res, next) => {
@@ -86,10 +127,6 @@ function requireLogin(req, res, next) {
   res.redirect('/');
 }
 
-// Crear una ruta para la página "modulo1"
-app.get('/module', requireLogin, (req, res, next) => {
-  res.render('modulo1.ejs', { pageTitle: 'Módulo 1' });
-});
 
 // Crear una ruta para procesar el formulario
 app.post('/module', (req, res, next) => {
